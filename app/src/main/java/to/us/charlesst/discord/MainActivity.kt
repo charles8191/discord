@@ -12,13 +12,12 @@ class MainActivity : AppCompatActivity() {
                 super.onCreate(savedInstanceState)
                 setContentView(R.layout.activity_main)
                 val webView: WebView = findViewById(R.id.webview)
-                CookieManager.getInstance().setAcceptCookie(true)
+                CookieManager.getInstance().setAcceptCookie(true) // for Cloudflare
                 val webSettings: WebSettings = webView.getSettings()
-                webView.settings.javaScriptEnabled = true
+                webView.settings.javaScriptEnabled = true // for obvious reasons, Discord is a JS-heavy app
                 webView.webViewClient = WebViewClient()
-                webView.settings.userAgentString = "Android/10.0 (compatible; Charles Discord webapp wrapper)"
-                webView.settings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
-                webSettings.setDomStorageEnabled(true)
+                webView.settings.userAgentString = "Android/10.0 (compatible; Charles Discord webapp wrapper)" // prevent fingerprinting by user-agent, also prevents being detected as very old Android version
+                webSettings.setDomStorageEnabled(true) // seems to be needed for login
                 webView.loadUrl("https://discord.com/app")
     }
 }
