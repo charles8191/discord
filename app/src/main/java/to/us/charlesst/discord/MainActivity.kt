@@ -6,9 +6,11 @@ import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+                window.statusBarColor = ContextCompat.getColor(this, R.color.blurple)
                 super.onCreate(savedInstanceState)
                 setContentView(R.layout.activity_main)
                 val webView: WebView = findViewById(R.id.webview)
