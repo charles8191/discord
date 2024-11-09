@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
                 val webSettings: WebSettings = webView.getSettings()
                 webView.settings.javaScriptEnabled = true // for obvious reasons, Discord is a JS-heavy app
                 webView.webViewClient = WebViewClient()
-                webView.settings.userAgentString = "Android/10.0 (compatible; Charles Discord webapp wrapper)" // prevent fingerprinting by user-agent, also prevents being detected as very old Android version
-                webSettings.setDomStorageEnabled(true) // seems to be needed for login
+                webView.settings.userAgentString = "Android" // prevent fingerprinting by user-agent
+                webSettings.setDomStorageEnabled(true) // used for tokens
                 webView.loadUrl("https://discord.com/app")
     }
 }
