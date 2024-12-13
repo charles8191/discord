@@ -22,6 +22,6 @@ An Android WebView wrapper for the hidden Discord mobile PWA.
 
 ### Broken
 
-- Voice & video calls [no permission, no code]
+- Voice & video calls [no permission, no code, website?, Chromium?]
 - Notifications [no code]
   - You may get a ping sound if the app is open in the background [untested]
