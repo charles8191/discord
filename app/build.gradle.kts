@@ -11,8 +11,8 @@ android {
         applicationId = "to.us.charlesst.discord"
         minSdk = 31
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 100
+        versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
