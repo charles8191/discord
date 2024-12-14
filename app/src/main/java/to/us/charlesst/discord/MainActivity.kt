@@ -60,7 +60,12 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onBackPressed() { // fix back button
         val webView: WebView = findViewById(R.id.webview)
-        webView.goBack()
+        if (webView.canGoBack()) {
+            webView.goBack()
+        }
+        else {
+            super.onBackPressed()
+        }
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent?) {
         super.onActivityResult(requestCode, resultCode, intent)
