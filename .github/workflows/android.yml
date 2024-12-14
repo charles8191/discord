@@ -22,7 +22,8 @@ jobs:
       run: ./gradlew assembleDebug
     - name: Get path
       id: path
-      run: echo "apk=$(find -iname *.apk -print -quit)" >> $GITHUB_OUTPUT
+      run: |
+        echo "apk=$(find -iname *.apk -print -quit)" | tee -a $GITHUB_OUTPUT
     - uses: actions/upload-artifact@v4
       with:
         name: apk
