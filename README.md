@@ -2,8 +2,10 @@
 
 An Android WebView wrapper for the hidden Discord mobile PWA.
 
-<a href="https://github.com/charles8191/discord/releases/latest"><img src="https://github.com/user-attachments/assets/57e315cc-e729-4a63-adf0-42f17508bb68" alt="Get it on GitHub" width="25%" height="25%"></img></a>
+## Download
 
+- [Download stable APK](https://github.com/charles8191/discord/releases/latest)
+- [Download unstable APK](https://nightly.link/charles8191/discord/workflows/android/master/apk.zip)
 
 ## Functionality
 
